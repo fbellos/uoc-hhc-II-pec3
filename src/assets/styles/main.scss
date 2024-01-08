@@ -1,0 +1,70 @@
+/**
+ * Use this file to import partials.
+ * Do not include SCSS code in this file.
+ */
+
+ @tailwind base;
+ @tailwind components;
+
+/**
+ * Import variables
+ */
+
+@import "variables";
+
+/**
+ * Import npm dependencies
+ * see: https://v2.parceljs.org/features/module-resolution/
+ * see commented examples below
+ */
+
+// @import "some-node-module";
+// @import "@some-company/some-node-module";
+@import 'npm:@fortawesome/fontawesome-free/css/all.css';
+
+
+/**
+ * Import layouts
+ * It's a best practice to use a different partial for each page
+ */
+
+@import 'layouts/commons';
+@import 'layouts/index';
+@import 'layouts/participantes';
+@import 'layouts/miliga';
+
+/**
+ * Do NOT include anything else in this file!
+ */
+
+ @tailwind utilities;
+
+ @layer components {
+    .box {
+        @apply p-8 mb-2 bg-boxcolor border-2 border-uoccorporate w-full sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/4;
+    }
+    .headerImage {
+        @apply bg-uoccorporate bg-cover bg-center p-10 mb-5;
+    }
+
+    .h3 {
+        @apply text-2xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-6xl mt-0 mb-3 mt-4 font-medium leading-10;
+    }
+
+    .h2 {
+        @apply text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl mt-0 mb-3 mt-4 font-medium leading-10;
+    }
+
+    .h1 {
+        @apply text-3xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl mt-0 mb-3 mt-4 font-medium leading-10;
+    }
+
+    .li {
+        @apply list-disc text-left;
+    }
+
+    .ul {
+        @apply list-disc;
+    }
+
+  }
